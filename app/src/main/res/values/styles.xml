@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <!--Inherit from base appl;ication theme-->
+
+<!--    <style name="Theme.Notes_App" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--    &lt;!&ndash; Primary brand color. &ndash;&gt;-->
+<!--    <item name="colorPrimary">@color/purple_500</item>-->
+<!--    <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--    <item name="colorOnPrimary">@color/white</item>-->
+<!--    </style>-->
+
+    <style name="ThemeOverlay.search" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Change text color here for search by default its white      -->
+        <item name="android:editTextColor">@android:color/white</item>
+
+        <!-- Hint text color       -->
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+</resources>
