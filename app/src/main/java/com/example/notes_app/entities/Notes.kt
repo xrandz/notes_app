@@ -3,6 +3,7 @@ package com.example.notes_app.entities
 import androidx.room.ColumnInfo
 import androidx.room.PrimaryKey
 import androidx.room.Entity
+import java.io.Serializable
 
 
 @Entity(tableName = "Notes")
@@ -32,7 +33,7 @@ data class Notes(
     @ColumnInfo(name = "color")
     var color:String
 
-) {
+): Serializable {
     override fun toString(): String {
         return "$title: $dateTime"
     }
