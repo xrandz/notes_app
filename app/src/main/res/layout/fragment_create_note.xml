@@ -38,16 +38,40 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/_10sdp"
         android:layout_margin="@dimen/_10sdp"
+        android:background="@null"
         app:layout_constraintTop_toBottomOf="@+id/imgBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/grey"
         android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/manrope_bold"
+        android:inputType="text"
         android:textColorHint="@color/white"
         android:hint="@string/notes_title"
         android:maxLines="1"
         android:ellipsize="end"/>
+
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/etNoteTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="@font/manrope_bold"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+<!--        android:hint="Date"-->
+
 
     <LinearLayout
         android:id="@+id/li"
@@ -71,11 +95,13 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_10sdp"
             android:textSize="@dimen/_12ssp"
+            android:background="@null"
             android:fontFamily="@font/manrope_medium"
             android:textColor="@color/grey"
             android:textColorHint="@color/white"
             android:hint="@string/notes_sub_title"
             android:maxLines="1"
+            android:inputType="text"
             android:ellipsize="end"/>
     </LinearLayout>
 
@@ -90,6 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/grey"
         android:inputType="textMultiLine"
+        android:background="@null"
         android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/manrope_regular"
         android:textColorHint="@color/white"

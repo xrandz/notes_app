@@ -10,9 +10,9 @@ interface notesDao {
     val allNotes:List<Notes>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNotes(notes: Notes)
+    suspend fun insertNotes(notes: Notes)
 
     @Delete
-    fun deleteNote(notes: Notes)
+    suspend fun deleteNote(notes: Notes)
 }
 
