@@ -1,11 +1,17 @@
 package com.example.notes_app
 
 import android.os.Bundle
+import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.notes_app.adapter.NoteAdapter
+import com.example.notes_app.database.NotesDatabase
+import com.example.notes_app.entities.Notes
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.launch
 
 class HomeFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +40,18 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        rec_view.setHasFixedSize(true)
+
+        rec_view.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
+        launch {
+            context?.let{
+                var notes = NotesDatabase.getDatabase(it).noteDao().getAllNotes()
+                rec_view.adapter = NoteAdapter(notes)
+            }
+        }
+
         fabBtnCreateNote.setOnClickListener {
             replaceFragment(CreateNoteFragment.newInstance(), true)
         }

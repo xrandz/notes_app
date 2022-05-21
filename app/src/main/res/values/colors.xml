@@ -8,8 +8,12 @@
     <color name="black">#191919</color>
     <color name="grey">#ACACAC</color>
     <color name="white">#ffffff</color>
+
     <color name="Materialwhite">#f2e7fe</color>
     <color name="MaterialBlack">#121212</color>
     <color name="MaterialBlue">#6200ee</color>
     <color name="MaterialYellow">#ffd600</color>
+    <color name="MaterialLightBlack">#272727</color>
+    <color name="MaterialText">#989B9C</color>
+
 </resources>
